@@ -1,0 +1,12 @@
+#header-mobile{
+    height: 59px;
+    border-radius: 14px 14px 0 0;
+    box-shadow: 0 3px 5px 0 rgb(212, 212, 212);
+    .content-header{
+        padding: 0 12px 0 12px;
+        height: 59px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
