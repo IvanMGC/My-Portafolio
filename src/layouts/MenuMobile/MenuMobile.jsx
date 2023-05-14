@@ -3,7 +3,7 @@ import ButtonHeader from '../../components/ButtonHeader/ButtonHeader';
 import PropTypes from 'prop-types';
 import './styles.scss';
 import FooterMobile from '../Footer/FooterMobile';
-import PaginationMenu from '../Menu/Menu';
+import PaginationMenu from '../PaginationMenu/Menu';
 
 export default function MenuMobile({isActivate}){
     return(
