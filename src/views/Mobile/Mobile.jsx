@@ -1,12 +1,16 @@
 import './styles.scss'
 import HeaderMobile from "../../layouts/Header/HeaderMobile";
 import FooterMobile from '../../layouts/Footer/FooterMobile';
+import { useState } from 'react';
+import MenuMobile from '../../layouts/Menu/MenuMobile';
 
 
 export default function Mobile(){
+    const [isActiveMenu, setIsActiveMenu] = useState(false);
     return(
         <div id='content-mobile'>
-            <HeaderMobile />
+            {isActiveMenu && <MenuMobile isActivate={()=>setIsActiveMenu(!isActiveMenu)} />}
+            <HeaderMobile isActivate={()=>setIsActiveMenu(!isActiveMenu)} />
             <h1>I am a mobile</h1>
             <FooterMobile />
         </div>
