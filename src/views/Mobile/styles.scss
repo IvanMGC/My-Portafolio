@@ -1,5 +1,16 @@
 #content-mobile{
-    margin: 16px;
+    margin: 4%;
     border-radius: 14px;
     border: 1px solid black;
+    min-width: 288px;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+
+@media screen and ((max-width: 711px)) {
 }

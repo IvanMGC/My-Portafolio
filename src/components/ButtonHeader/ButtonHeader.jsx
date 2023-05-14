@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import './styles.scss'
 
-export default function ButtonHeader({componentArr}){
+export default function ButtonHeader({click,componentArr,styles}){
     return(
-        <button className='button-header'>
+        <button onClick={click} className='button-header' style={styles}>
             {componentArr}
         </button>
     )
@@ -13,4 +13,6 @@ export default function ButtonHeader({componentArr}){
 
 ButtonHeader.propTypes = {
     componentArr: PropTypes.object.isRequired,
+    click: PropTypes.func,
+    styles: PropTypes.object
 }
