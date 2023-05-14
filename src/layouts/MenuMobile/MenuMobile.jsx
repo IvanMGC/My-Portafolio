@@ -10,7 +10,7 @@ export default function MenuMobile({isActivate}){
         <div id='container-menu-mobile'>
             <div className='btn-menu-mobile'>
                 <ButtonHeader click={isActivate} componentArr={<ImgcMenu width="18px" fill="#2D2D2D"/>} />
-                <PaginationMenu />
+                <PaginationMenu click={isActivate} />
             </div>
             <FooterMobile />
         </div>

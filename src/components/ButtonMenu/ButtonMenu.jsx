@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import './styles.scss'
 
-export default function ButtonMenu({route,text}){
+export default function ButtonMenu({click, route,text}){
     return(
-        <button className='button-menu'>
+        <button onClick={click} className='button-menu'>
             <Link to={route}>{text}</Link>
         </button>
     )
@@ -14,4 +14,5 @@ export default function ButtonMenu({route,text}){
 ButtonMenu.propTypes = {
     route: PropTypes.string,
     text: PropTypes.string,
+    click: PropTypes.func,
 }
