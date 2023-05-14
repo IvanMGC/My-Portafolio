@@ -1,4 +1,5 @@
 #content-mobile{
+    height: 100px;
     margin: 4%;
     border-radius: 14px;
     border: 1px solid black;
@@ -9,6 +10,14 @@
     justify-content: space-between;
     position: relative;
     overflow: hidden;
+
+    .content-pages{
+        padding: 0 6%;
+        overflow-y: hidden;
+    }
+    .content-pages::-webkit-scrollbar{
+        display: none;
+    }
 }
 
 
