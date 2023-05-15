@@ -1,0 +1,20 @@
+section{
+    margin: 5% 0;
+}
+.button-set{
+    display: flex;
+    justify-content: center;
+    .button-general{
+        padding: 0;
+        border-radius: 10px;
+        border: none;
+        background: #F7DF1E;
+        a{
+            font-family: 'Poppins-Medium';
+            padding: 5px 12px;
+            display: block;
+            color:#000000;
+            text-decoration: none;
+        }
+    }
+}
