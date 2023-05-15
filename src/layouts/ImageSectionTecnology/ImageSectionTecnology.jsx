@@ -20,7 +20,7 @@ export default function ImageSectionTecnology({widthIcon}){
     return(
         <div className='image-section-tecnology'>
             <Icon link={"https://developer.mozilla.org/es/docs/Glossary/HTML5"}  componentSVG={<ImgcHtml5 width={widthIcon} />}/>
-            <Icon link={"https://developer.mozilla.org/es/docs/Web/CSS"}  componentSVG={<ImgcCss3 width={widthIcon} />}/>
+            <Icon link={"https://developer.mozilla.org/es/docs/Web/CSS"}  componentSVG={<ImgcCss3  width={widthIcon} />}/>
             <Icon link={"https://developer.mozilla.org/es/docs/Web/JavaScript"}  componentSVG={<ImgcJS width={widthIcon} />}/>
             <Icon link={"https://sass-lang.com/"}  componentSVG={<ImgcSass width={widthIcon} />}/>
             <Icon link={"https://es.react.dev/"}  componentSVG={<ImgcReact width={widthIcon} />}/>

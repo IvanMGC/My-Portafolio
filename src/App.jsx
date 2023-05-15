@@ -15,7 +15,7 @@ export default function App(){
       return()=>{
         window.removeEventListener('resize',changeSize);
       }
-    })
+    });
   
     return(
       <>

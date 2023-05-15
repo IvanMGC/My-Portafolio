@@ -1,15 +1,16 @@
-import ButtonMenu from '../ButtonMenu/ButtonMenu';
+import ButtonLink from '../ButtonLink/ButtonLink';
 import PropTypes from 'prop-types';
 
 import './styles.scss';
 
 export default function ButtonSetMenu({click}){
+    const stringClass = "button-menu";
     return(
         <div className='button-set-menu'>
-            <ButtonMenu click={click} route={'/'} text={'Inicio'} />
-            <ButtonMenu click={click} route={'/about'} text={'Sobre mi'} />
-            <ButtonMenu click={click} route={'/portafolio'} text={'Portafolio'} />
-            <ButtonMenu route={'#'} text={'Mi CV'} />
+            <ButtonLink classBtn={stringClass} click={click} route={'/'} text={'Inicio'} />
+            <ButtonLink classBtn={stringClass} click={click} route={'/about'} text={'Sobre mi'} />
+            <ButtonLink classBtn={stringClass} click={click} route={'/portafolio'} text={'Portafolio'} />
+            <ButtonLink classBtn={stringClass} route={'#'} text={'Mi CV'} />
         </div>
     )
 }
