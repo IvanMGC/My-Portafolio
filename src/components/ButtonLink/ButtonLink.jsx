@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import './styles.scss'
 
-export default function ButtonLink({classBtn,click, route,text}){
+export default function ButtonLink({styles,classBtn,click, route,text}){
     return(
         <button onClick={click} className={classBtn}>
-            <Link to={route}>{text}</Link>
+            <Link style={styles} to={route}>{text}</Link>
         </button>
     )
 }
@@ -16,4 +16,5 @@ ButtonLink.propTypes = {
     text: PropTypes.string,
     click: PropTypes.func,
     classBtn: PropTypes.string,
+    styles: PropTypes.object,
 }
