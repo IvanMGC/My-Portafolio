@@ -3,15 +3,15 @@ import Mobile from "../views/Mobile/Mobile";
 import About from "../pages/About/About";
 import Home from "../pages/Home/Home"
 import Portafolio from "../pages/Portafolio/Portafolio";
+import PropTypes from 'prop-types';
 
 
+export default function Router({windowSize}){
 
-export default function RouterMobile(){
-    const domain = window.location.origin;
     const routerMobile = createBrowserRouter([
         {
             path:'/',
-            element: <Mobile />,
+            element: (windowSize >= 744)?<h1>Modo Tablet y Desktop</h1>:<Mobile/>,
             children:[
                 {
                     path: "/",
@@ -44,6 +44,10 @@ export default function RouterMobile(){
         }
     ]);
     return(
-        <RouterProvider router={routerMobile} basename={domain} />
+        <RouterProvider router={routerMobile}/>
     )
+}
+
+Router.propTypes = {
+    windowSize: PropTypes.number,
 }

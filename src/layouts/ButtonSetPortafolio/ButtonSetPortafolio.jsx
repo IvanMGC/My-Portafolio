@@ -20,6 +20,7 @@ export default function ButtonSetPortafolio(){
         background: "#F7DF1E",
         color:"black",
         padding: "5px 9px",
+        transition: "all .2s",
     }
 
     return(

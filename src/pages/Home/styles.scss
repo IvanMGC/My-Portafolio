@@ -4,15 +4,20 @@
     .button-general{
         margin: 0 5%;
         padding: 0;
-        border-radius: 10px;
+        background: none;
         border: none;
-        background: #F7DF1E;
         a{
+            background: #F7DF1E;
+            border-radius: 10px;
             font-family: 'Poppins-Medium';
             padding: 5px 12px;
             display: block;
             color:#000000;
             text-decoration: none;
+        }
+        a:hover{
+            background-color: #2D2D2D;
+            color: #F7DF1E;
         }
     }
 }
