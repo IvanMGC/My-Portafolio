@@ -31,4 +31,14 @@
 
 body{
     margin: auto auto;
+    
+}
+
+#root{
+    display: flex;
+    height: 100vh;
+}
+
+section{
+    margin-bottom: 5%;
 }

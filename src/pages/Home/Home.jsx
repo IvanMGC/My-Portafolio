@@ -30,6 +30,7 @@ export default function Home(){
                 >
                 <div className="button-set">
                     <ButtonLink classBtn={"button-general"} route={'/about'} text={'Más sobre mi'} /> 
+                    <ButtonLink classBtn={"button-general"} text={'Mi CV'}/>
                 </div>               
             </section>
             <section>

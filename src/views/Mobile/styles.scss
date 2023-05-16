@@ -1,10 +1,9 @@
 #content-mobile{
-    height: 100px;
+    
     margin: 4%;
     border-radius: 14px;
     border: 1px solid black;
     min-width: 288px;
-    min-height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -14,7 +13,7 @@
 
     .content-pages{
         flex-grow: 1;
-        padding: 0 6%;
+        padding: 6%;
         overflow: scroll;
     }
     .content-pages::-webkit-scrollbar{
@@ -24,5 +23,8 @@
 
 
 
-@media screen and ((max-width: 711px)) {
+@media screen and ((max-width: 743px)) {
+    #content-mobile{
+        width: 100%;
+    }
 }
