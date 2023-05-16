@@ -1,4 +1,5 @@
 #button-set-portafolio{
+    height: 32px;
     display: flex;
     align-items: flex-end;
     margin-bottom: 5%;
@@ -29,6 +30,7 @@
 
 @media screen and (min-width: 625px){
     #button-set-portafolio{
+        height: 35px;
         .button-portafolio{
             a{
                 font-size: 15px;
