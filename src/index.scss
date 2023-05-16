@@ -1,3 +1,12 @@
+*{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 @font-face{
     font-family:'Poppins-Regular';
     src:url('./assets/fonts/Poppins-Regular.ttf');
@@ -31,13 +40,22 @@
 
 body{
     margin: auto auto;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 #root{
     display: flex;
+    flex-grow: 1;
     height: 100vh;
+    justify-content: center;
 }
 
 section{
     margin-bottom: 5%;
 }
+
+
+
