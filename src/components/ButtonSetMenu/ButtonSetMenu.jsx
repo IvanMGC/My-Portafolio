@@ -9,7 +9,7 @@ export default function ButtonSetMenu({click}){
         <div className='button-set-menu'>
             <ButtonLink classBtn={stringClass} click={click} route={'/'} text={'Inicio'} />
             <ButtonLink classBtn={stringClass} click={click} route={'/about'} text={'Sobre mi'} />
-            <ButtonLink classBtn={stringClass} click={click} route={'/portafolio'} text={'Portafolio'} />
+            <ButtonLink classBtn={stringClass} click={click} route={'/portafolio/basico'} text={'Portafolio'} />
             <ButtonLink classBtn={stringClass} route={'#'} text={'Mi CV'} />
         </div>
     )
