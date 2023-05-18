@@ -36,6 +36,28 @@
     src: url("./assets/fonts/IBMPlexSans-Medium.ttf");
 }
 
+@font-face {
+    font-family: "IBMPlexSans-SemiBold";
+    src: url("./assets/fonts/IBMPlexSans-SemiBold.ttf");
+}
+
+
+//Fuentes que usa las aplicaciones
+@font-face {
+    font-family: 'digital-clock-font';
+    src: url('./assets/fonts/digital-clock.ttf');
+}
+
+@font-face {
+    font-family: 'RopaSans-Italic';
+    src: url('./assets/fonts/RopaSans-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'SF-Digital-Readout-Light-Obliq';
+    src: url('./assets/fonts/SF-Digital-Readout-Light-Obliq.ttf');
+}
+
 
 
 body{

@@ -1,0 +1,96 @@
+#content-chronometer{
+    width: 298px;
+    height: 298px;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.cro-circle {
+    margin: 36px auto;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background-color: rgb(24, 23, 23);
+    background: linear-gradient(130deg, rgba(0,215,255,1) 0%, rgba(30,21,159,1) 100%);
+    position: relative;
+    box-shadow: 1px 9px 10px rgba(0, 0, 0, 0.452);
+}
+
+.btn-cro, .cro-deco1, .cro-deco2, .cro-show-numbers{
+    position: absolute;
+}
+
+.cro-show-numbers{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: rgb(41, 41, 41);
+    left: 43.5px;
+    top: 43.5px;
+    border: 6px solid rgb(0, 94, 201);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-family: 'digital-clock-font';
+    
+}
+
+.cro-show-numbers #cro{
+    
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+}
+
+.cro-show-numbers #cro .sec-min{
+    font-size: 50px;
+}
+
+.cro-show-numbers #cro .mil{
+    font-size: 30px;
+    margin-top: 14px;
+    width: 26px;
+}
+
+
+#content-chronometer .cro-deco1{
+    background: linear-gradient(110deg, rgba(0,215,255,1) 2%, rgb(18, 10, 131) 100%);
+    width: 45px;
+    height: 25px;
+    border-radius: 6px 8px 5px 5px;
+    left: 127.5px;
+    top: 3px;
+    z-index: 1;
+}
+
+#content-chronometer .cro-deco2{
+    background: rgb(4, 2, 121);
+    width: 30px;
+    height: 30px;
+    left: 135px;
+    top: 20px;
+}
+
+#content-chronometer .btn-cro{
+    width: 40px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    transition: all .1s;
+    
+}
+
+.start-stop{
+    left: 225px;
+    top: 58px;
+    transform: rotate(50deg);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(182,182,182,1) 100%);
+}
+
+.start-stop:active{
+    background: linear-gradient(90deg, rgba(205,205,205,1) 0%, rgba(136,136,136,1) 100%);
+    left: 219px;
+    top: 64px;
+}

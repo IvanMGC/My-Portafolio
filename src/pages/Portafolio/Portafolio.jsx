@@ -9,7 +9,7 @@ export default function Portafolio(){
             <ButtonSetPortafolio />
             <section>
                 <SubTitle styles={{textAlign:"center"}} subTitle={"Mis proyectos"} />
-                <div className='project-container'>
+                <div id='project-container'>
                     <Outlet />
                 </div>
             </section>
