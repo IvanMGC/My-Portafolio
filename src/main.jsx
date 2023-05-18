@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import RouterMobile from './routes/Router';
+import Router from './routes/Router';
 
 function Apps(){
   const [width, setWidth] = useState(window.innerWidth);
@@ -18,7 +18,7 @@ function Apps(){
     });
 
     return(
-      <RouterMobile windowSize={width} />
+      <Router windowSize={width} />
     )
 
 }

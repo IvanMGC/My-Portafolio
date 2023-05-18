@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ButtonLink from '../../components/ButtonLink/ButtonLink';
 import './styles.scss';
+import { useLocation } from 'react-router-dom';
 
 const linkArr = [
     {id:1, link: "/portafolio/basico", name: "Básico"},
@@ -10,6 +11,23 @@ const linkArr = [
 
 export default function ButtonSetPortafolio(){
     const [idLink,setIdLink] = useState(1);
+    const location = useLocation().pathname;
+    
+    const filterPage = () =>{
+        const pageNames = {
+            "/":"Inicio",
+            "/about":"Sobre mi",
+            "/portafolio":"Portafolio",
+        };
+        let route = "";
+        for(const prop in pageNames){
+            if(location.includes(prop)){
+                route=prop;
+            }
+        }
+        return pageNames[route];
+    }
+
 
     const changeId =(id)=>{
         setIdLink(id);

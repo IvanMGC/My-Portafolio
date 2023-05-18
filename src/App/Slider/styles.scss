@@ -1,0 +1,67 @@
+#content-app-slider{
+    width: 624px;
+    height: 351px;
+    background: black;
+    display: inline-block;
+}
+
+#content-app-slider #content-box-slider{
+    position: relative;
+}
+
+.img-slider{
+    position: absolute;
+    width: 624px;
+    height: 351px;
+}
+
+#button-row-slider{
+    width: 624px;
+    height: 351px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#button-row-slider .btn-arrow-slider{
+    background: none;
+    border:none;
+}
+#button-row-slider .btn-arrow-slider .material-symbols-outlined{
+    color:white;
+    font-size: 60px;
+    font-weight: bold;
+    transition: all .1s;
+}
+
+#button-row-slider .btn-arrow-slider .material-symbols-outlined:hover{
+    color:rgb(255, 11, 11);
+}
+
+#button-row-slider .btn-arrow-slider .material-symbols-outlined:active{
+    color:rgb(48, 48, 48);
+    font-size: 55px;
+}
+
+#button-circle-slider{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 594px;
+    height: 20px;
+    padding: 15px;
+    top: 304px;
+}
+
+#button-circle-slider .btn-circle-slider{
+    width: 11px;
+    height: 11px;
+    border-radius: 50px;
+    background: rgb(248, 154, 154);
+    border: none;
+    margin-right: 10px;
+    border-bottom: 2px solid rgb(138, 1, 1);
+    transition: all .2s;
+}

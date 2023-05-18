@@ -1,0 +1,33 @@
+.card-projects{
+    margin: 2%;
+    border-radius: 3%;
+    width: 174px;
+    height: 150px;
+    background: #2D2D2D;
+    overflow: hidden;
+    text-decoration: none;
+    .contenet-card{
+        img{
+            width: 174px;
+            height: 99.57px;
+        }
+    }
+    .box-descripcion{
+        padding: 0 10px;;
+        h1,p{
+            margin: 0;
+            font-size: 13px;
+        }
+        .name-project{
+            color: #F7DF1E;
+            font-family: "IBMPlexSans-SemiBold";
+        }
+        .des-project{
+            color: white;
+            font-family: 'IBMPlexSans-Regular';
+        }
+    }
+}
+
+@media screen and (max-width: 743px) {
+}
