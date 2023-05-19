@@ -12,7 +12,7 @@ const ShowCurrentDay=({day})=>{
     const weekDay = ["SUN","MON","TUE","WED","THU","FRI","SAT"];
     return(
         <div className='show-current-day'>
-            {weekDay.map((e,i)=>(day!==i)?<span key={e}>{e}</span>:<span key={e} className='day-red'><span className='spot'/>{e}</span>)}
+            {weekDay.map((e,i)=>(day!==i)?<span key={e}>{e}</span>:<span key={e} className='day-red'>{e}</span>)}
         </div>
     )
 }
