@@ -26,9 +26,10 @@ import calculator from '../assets/Images/calculator.jpg';
 import chronometer from '../assets/Images/chronometer.jpg';
 import accountant from '../assets/Images/accountant.jpg';
 import relojDigital from '../assets/Images/reloj-digital.jpg';
-import slider from '../assets/Images/slider.jpg'
+import slider from '../assets/Images/slider.jpg';
 
 export default function Router({windowSize}){
+    
     const dataProjects = [
         {id:1,name:"Calculadora",description: "React, Sass, HTML5", nivel:"Basico",project:<CalculatorBase />, link:"",img:calculator,},
         {id:2,name:"Contador",description: "React, Sass, HTML5", nivel:"Basico",project:<AppAccountant />, link:"",img:accountant,},
@@ -36,6 +37,7 @@ export default function Router({windowSize}){
         {id:4,name:"Reloj Digital",description: "React, Sass, HTML5", nivel:"Basico",project:<AppDigitalClock />, link:"",img:relojDigital,},
         {id:5,name:"Slider",description: "React, Sass, HTML5", nivel:"Basico",project:<AppSlider />, link:"",img:slider,},
     ];
+
     const [selectedProject,setSelectedProject] = useState(dataProjects[0]);
     
     const selectProject = (id) =>{
@@ -59,15 +61,15 @@ export default function Router({windowSize}){
                     element: <Portafolio />,
                     children:[
                         {
-                            path:"/portafolio/basico",
+                            path:"/portafolio/essential",
                             element: <SetProyects handleclick={(id)=>{selectProject(id)}} data={dataProjects} />
                         },
                         {
-                            path:"/portafolio/intermedio",
+                            path:"/portafolio/intermediate",
                             element: <></>
                         },
                         {
-                            path:"/portafolio/avanzado",
+                            path:"/portafolio/advanced",
                             element: <></>
                         },
                     ]
