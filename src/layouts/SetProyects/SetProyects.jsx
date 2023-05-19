@@ -1,5 +1,4 @@
 import CardProject from '../../components/CardProject/CardProject';
-import imgCalculator from '../../assets/Images/calculator.jpg';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
