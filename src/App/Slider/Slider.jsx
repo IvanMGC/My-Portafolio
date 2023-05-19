@@ -9,8 +9,6 @@ import ImgcKeyboardArrowRight from '../../assets/Icons/ImgcKeyboardArrowRight';
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
 
 const CircleButtonSlider = ({data,click, id}) => {
     const obj = {
@@ -36,7 +34,9 @@ const ArrowButtonSlider = ({img,click}) => {
 
 const ShowImagesSlider = ({picture}) => {
     return(
-        <img className="img-slider" src={picture[0].img} alt={picture[0].alt}/>
+        <a href="#">
+            <img className="img-slider" src={picture[0].img} alt={picture[0].alt}/>
+        </a>
     )
 }
 

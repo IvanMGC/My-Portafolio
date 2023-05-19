@@ -1,115 +1,98 @@
 #content-g-dc{
-    display: inline-block;
+    display: block;
     position: relative;
-    height: 260px;
     margin: auto 0;
+    width: 100%;
+
+    .btn-clock{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px 5px 0 0;
+        border: none;
+        background: linear-gradient(90deg, rgba(102,102,119,1) 0%, rgba(13,13,24,1) 100%);
+        color:white;
+        font-size: 9px;
+        padding: 0;
+        left: 30px;
+    }
+    .btn-clock:active{
+        background: linear-gradient(90deg, rgba(71,71,82,1) 0%, rgba(13,13,24,1) 100%);
+        height: 15px;
+        top: 5px;
+    }
+
+    #content-digital-clock{
+        background: linear-gradient(182deg, rgb(67, 67, 88) 0%, rgba(19,19,41,1) 100%);
+        padding: 12px;
+        border-radius: 10px;
+        margin-top: 19px;
+        z-index: -2;
+        box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.452);
+
+        #digital-clock{
+            color:black;
+            padding: 6% 0;
+            border: 1px solid rgba(34, 32, 32, 0.795);
+            border-radius: 2px;
+            background: linear-gradient(182deg, rgb(67, 67, 88) 0%, rgba(19,19,41,1) 100%);
+            
+            #window-digital-clock{
+                background-color:black; 
+                padding: 1.5% 0;
+                
+                .show-current-time{
+                    color:rgb(255, 18, 18);
+                    font-family: 'digital-clock-font';
+                    font-size: 20vw;
+                    text-align: center;
+                    .number{
+                        display: inline-block;
+                        text-align: center;
+                    }
+                }
+                .dc-window-second{
+                    color:white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;align-items: center;
+                    
+                    .show-current-date{
+                        margin: 2% 0;
+                        text-align: center;
+                        .dc-number{
+                            font-family: 'digital-clock-font';
+                            font-size: 5.5vw;
+                            color:rgb(255, 50, 50);
+
+                        }
+                        .dc-chart{
+                            font-family: 'RopaSans-Italic';
+                            font-size: 4.5vw;
+                            margin-right: 8px;
+                        }
+                    }
+                    .show-current-day{
+                        margin: 3% 0;
+                        text-align: center;
+                        font-family: 'RopaSans-Italic';
+                        position: relative;
+
+                        span{
+                            margin-left: 6px;
+                            font-size: 4.5vw;
+                        }
+                        .day-red{
+                            color:red;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
 }
 
-#content-digital-clock{
-    background: linear-gradient(182deg, rgb(67, 67, 88) 0%, rgba(19,19,41,1) 100%);
-    width: 600px;
-    height: 214px;
-    padding: 12px;
-    border-radius: 10px;
-    margin-top: 19px;
-    z-index: -2;
-    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.452);
-}
-
-.btn-clock{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 5px 5px 0 0;
-    border: none;
-    background: linear-gradient(90deg, rgba(102,102,119,1) 0%, rgba(13,13,24,1) 100%);
-    color:white;
-    font-size: 9px;
-    padding: 0;
-    left: 30px;
-}
-
-.btn-clock:active{
-    background: linear-gradient(90deg, rgba(71,71,82,1) 0%, rgba(13,13,24,1) 100%);
-    height: 15px;
-    top: 5px;
-}
 
 
-#digital-clock{
-    height: 187px;
-    color:black;
-    padding: 12px 0;
-    border: 1px solid rgba(34, 32, 32, 0.795);
-    border-radius: 2px;
-    background: linear-gradient(182deg, rgb(67, 67, 88) 0%, rgba(19,19,41,1) 100%);
 
-}
-
-#window-digital-clock{
-    background-color: black;
-    height: 187.5px;
-}
-
-#window-digital-clock .show-current-time{
-    height:151px;
-    color:rgb(255, 18, 18);
-    background: rgb(3, 3, 3);
-    font-family: 'digital-clock-font';
-    font-size: 159px;
-    text-align: center;
-}
-
-.show-current-time .number{
-    display: inline-block;
-    width: 149px;
-    text-align: center;
-}
-
-
-#window-digital-clock .dc-window-second{
-    background: rgb(0, 0, 0);
-    color:white;
-    height: 36.5px;
-    display: flex;
-    justify-content: space-around;align-items: center;
-    
-}
-
-#window-digital-clock .show-current-date{
-    width: 227px;
-    text-align: center;
-}
-
-.show-current-date .dc-number{
-    font-family: 'digital-clock-font';
-    font-size: 23px;
-    margin-right: 3px;
-    color:rgb(255, 50, 50);
-}
-.show-current-date .dc-chart{
-    font-family: 'RopaSans-Italic';
-    margin-right: 8px;
-}
-
-.show-current-day{
-    width: 230px;
-    text-align: center;
-    font-family: 'RopaSans-Italic';
-    position: relative;
-}
-
-.show-current-day span{
-    margin-left: 6px;
-    
-}
-
-.day-red .spot{
-    position: absolute;
-    top: -10px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50px;
-    background: red;
-    margin-left: 10px;
-}
