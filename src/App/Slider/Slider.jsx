@@ -3,6 +3,9 @@ import sliderImg1 from '../../assets/Images/slider-img-1.jpg';
 import sliderImg2 from '../../assets/Images/slider-img-2.jpg';
 import sliderImg3 from '../../assets/Images/slider-img-3.jpg';
 import sliderImg4 from '../../assets/Images/slider-img-4.jpg';
+import ImgcKeyboardArrowLeft from '../../assets/Icons/ImgcKeyboardArrowLeft';
+import ImgcKeyboardArrowRight from '../../assets/Icons/ImgcKeyboardArrowRight';
+
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -11,12 +14,14 @@ import PropTypes from 'prop-types';
 
 const CircleButtonSlider = ({data,click, id}) => {
     const obj = {
-        backgroundColor: "rgb(255, 31, 31)",
-        boxShadow: "0 0 15px rgb(255, 82, 82)"
+        backgroundColor: "#F7DF1E",
+        boxShadow: "0 0 15px #F7DF1E"
     }
     return(
-        <div id='button-circle-slider'>
-            {data.map((e,i)=>(id === i)?<button style={obj} key={e.img} onClick={()=>click(i)} className='btn-circle-slider'/>:<button key={e.img} onClick={()=>click(i)} className='btn-circle-slider'/>)}
+        <div id='box-btn-cs'>
+            <div className='buttons-cs'>
+                {data.map((e,i)=>(id === i)?<button style={obj} key={e.img} onClick={()=>click(i)} className='btn-circle-slider'/>:<button key={e.img} onClick={()=>click(i)} className='btn-circle-slider'/>)}
+            </div>
         </div>
     )
 }
@@ -24,11 +29,7 @@ const CircleButtonSlider = ({data,click, id}) => {
 const ArrowButtonSlider = ({img,click}) => {
     return(
         <button onClick={()=>click()} className='btn-arrow-slider'>
-            {/*
-                <span className="material-symbols-outlined">
-                {img}
-            </span>
-            */}
+            {img}
         </button>
     )
 }
@@ -68,10 +69,12 @@ const AppSlider = ({imgs}) => {
     return(
         <div id='content-app-slider'>
             <div id='content-box-slider'>
-                <ShowImagesSlider picture={filterImg}/>
+                <div className='images-slider'>
+                    <ShowImagesSlider picture={filterImg}/>
+                </div>
                 <div id='button-row-slider'>
-                    <ArrowButtonSlider img={"keyboard_double_arrow_left"} click={()=>{decrementIndex()}}/>
-                    <ArrowButtonSlider img={"keyboard_double_arrow_right"} click={()=>{incrementIndex()}}/>
+                    <ArrowButtonSlider img={<ImgcKeyboardArrowLeft className="btn" />} click={()=>{decrementIndex()}}/>
+                    <ArrowButtonSlider img={<ImgcKeyboardArrowRight className="btn" />} click={()=>{incrementIndex()}}/>
                 </div>
                 <CircleButtonSlider click={(i)=>{setIndexImg(i)}} data={imgs} id={indexImg}/>
             </div>           
@@ -97,7 +100,7 @@ CircleButtonSlider.propTypes = {
 }
 
 ArrowButtonSlider.propTypes = {
-	img: PropTypes.string,
+	img: PropTypes.object,
 	click: PropTypes.func,
 }
 
