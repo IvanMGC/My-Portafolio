@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { getNumLevelsProjects } from "../functions/dataProjects";
 
+
 export const useFilterLevelProject=()=>{
     const location = useLocation().pathname;
 
@@ -8,9 +9,9 @@ export const useFilterLevelProject=()=>{
         let route = "";
         let text = "";
         const pageNames = {
-            "/portafolio/essential":"Essential",
-            "/portafolio/intermediate":"Intermediate",
-            "/portafolio/advanced":"Advanced",
+            "/portafolio/basico":"Basico",
+            "/portafolio/intermedio":"Intermedio",
+            "/portafolio/avanzado":"Avanzado",
         };
         
         for(const prop in pageNames){
@@ -23,6 +24,7 @@ export const useFilterLevelProject=()=>{
         }else{
             text = "Por definir...";
         }
+        console.log(text)
         return text;
     };
 

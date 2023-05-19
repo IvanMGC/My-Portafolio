@@ -4,9 +4,9 @@ import './styles.scss';
 import { useLocation } from 'react-router-dom';
 
 const linkArr = [
-    {id:1, link: "/portafolio/essential", name: "Básico"},
-    {id:2, link: "/portafolio/intermediate", name: "Intermedio"},
-    {id:3, link: "/portafolio/advanced", name: "Avanzado"},
+    {id:1, link: "/portafolio/basico", name: "Básico"},
+    {id:2, link: "/portafolio/intermedio", name: "Intermedio"},
+    {id:3, link: "/portafolio/avanzado", name: "Avanzado"},
 ];
 
 export default function ButtonSetPortafolio(){

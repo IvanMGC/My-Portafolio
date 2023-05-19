@@ -25,14 +25,10 @@ export function getProjects(){
 }
 
 export function getNumLevelsProjects(){
-    let levels = {essential:0,intermediate:0,advanced:0};
-    const levelsEnglish = {basico:"essential", intermedio:"intermediate",avanzando:"advanced"}
-    
+    let levels = {basico:0,intermedio:0,avanzado:0};
+
     dataProjects.forEach(element => {
-            levels[levelsEnglish[element.nivel.toLowerCase()]]++;
+        levels[element.nivel.toLowerCase()]++;
     });
-    console.log(levels)
     return levels;
 }
-
-
