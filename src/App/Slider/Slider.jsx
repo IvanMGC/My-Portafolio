@@ -1,8 +1,8 @@
 import './styles.scss';
-import sliderImg1 from './img/slider-img-1.jpg';
-import sliderImg2 from './img/slider-img-2.jpg';
-import sliderImg3 from './img/slider-img-3.jpg';
-import sliderImg4 from './img/slider-img-4.jpg';
+import sliderImg1 from '../../assets/Images/slider-img-1.jpg';
+import sliderImg2 from '../../assets/Images/slider-img-2.jpg';
+import sliderImg3 from '../../assets/Images/slider-img-3.jpg';
+import sliderImg4 from '../../assets/Images/slider-img-4.jpg';
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
