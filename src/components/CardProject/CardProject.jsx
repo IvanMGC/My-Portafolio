@@ -7,7 +7,9 @@ export default function CardProject({click, urlProyect, img,nameProject, desProj
     return(
         <Link onClick={click} className='card-projects' to={urlProyect}>
             <article className='contenet-card'>
-                <img src={img} alt={desProject} />
+                <div>
+                    <img src={img} alt={desProject} />
+                </div>
                 <div className='box-descripcion'>
                     <h1 className='name-project'>{nameProject}</h1>
                     <p className='des-project'>{desProject}</p>
