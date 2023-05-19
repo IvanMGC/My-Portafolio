@@ -17,5 +17,5 @@ export const useFilterPage=()=>{
         return pageNames[route];
     };
 
-    return filterPage()
+    return filterPage();
 };

@@ -14,34 +14,16 @@ import Project from "../pages/Project/Project";
 //Layouts
 import SetProyects from "../layouts/SetProyects/SetProyects";
 
-//Apps
-import CalculatorBase from "../App/Calculator/Calculator";
-import AppAccountant from "../App/Accountant/Accountant";
-import AppChronometer from "../App/Chronometer/Chronometer";
-import AppDigitalClock from "../App/DigitalClock/DigitalClock";
-import AppSlider from "../App/Slider/Slider";
-
-//Images
-import calculator from '../assets/Images/calculator.jpg';
-import chronometer from '../assets/Images/chronometer.jpg';
-import accountant from '../assets/Images/accountant.jpg';
-import relojDigital from '../assets/Images/reloj-digital.jpg';
-import slider from '../assets/Images/slider.jpg';
+//Functions
+import { getProjects } from "../utils/functions/dataProjects";
 
 export default function Router({windowSize}){
     
-    const dataProjects = [
-        {id:1,name:"Calculadora",description: "React, Sass, HTML5", nivel:"Basico",project:<CalculatorBase />, link:"",img:calculator,},
-        {id:2,name:"Contador",description: "React, Sass, HTML5", nivel:"Basico",project:<AppAccountant />, link:"",img:accountant,},
-        {id:3,name:"Cronometro",description: "React, Sass, HTML5", nivel:"Basico",project:<AppChronometer />, link:"",img:chronometer,},
-        {id:4,name:"Reloj Digital",description: "React, Sass, HTML5", nivel:"Basico",project:<AppDigitalClock />, link:"",img:relojDigital,},
-        {id:5,name:"Slider",description: "React, Sass, HTML5", nivel:"Basico",project:<AppSlider />, link:"",img:slider,},
-    ];
-
-    const [selectedProject,setSelectedProject] = useState(dataProjects[0]);
+    const [projects] = useState(getProjects())
+    const [selectedProject,setSelectedProject] = useState(projects[0]);
     
     const selectProject = (id) =>{
-        setSelectedProject(dataProjects[id-1]);
+        setSelectedProject(projects[id-1]);
     }
     const router = createBrowserRouter([
         {
@@ -61,15 +43,15 @@ export default function Router({windowSize}){
                     element: <Portafolio />,
                     children:[
                         {
-                            path:"/portafolio/essential",
-                            element: <SetProyects handleclick={(id)=>{selectProject(id)}} data={dataProjects} />
+                            path:"/portafolio/basico",
+                            element: <SetProyects handleclick={(id)=>{selectProject(id)}} data={projects} />
                         },
                         {
-                            path:"/portafolio/intermediate",
+                            path:"/portafolio/intermedio",
                             element: <></>
                         },
                         {
-                            path:"/portafolio/advanced",
+                            path:"/portafolio/avanzado",
                             element: <></>
                         },
                     ]
