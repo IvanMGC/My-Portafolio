@@ -6,7 +6,7 @@ import './styles.scss';
 export default function SetProyects({handleclick,data}){
     return(
         <>
-            {data.map(element => <CardProject key={element.id} click={()=>handleclick(element.id)} urlProyect={`/portafolio/${element.nivel.toLowerCase()}/${element.name.toLowerCase()}`} nameProject={element.name} desProject={element.description} img={imgCalculator} />)}
+            {data.map(element => <CardProject key={element.id} click={()=>handleclick(element.id)} urlProyect={`/portafolio/${element.nivel.toLowerCase()}/${element.name.toLowerCase()}`} nameProject={element.name} desProject={element.description} img={element.img} />)}
         </>
     )
 }

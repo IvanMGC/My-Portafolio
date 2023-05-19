@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ButtonLink from '../../components/ButtonLink/ButtonLink';
 import './styles.scss';
 import { useLocation } from 'react-router-dom';
@@ -10,28 +10,17 @@ const linkArr = [
 ];
 
 export default function ButtonSetPortafolio(){
-    const [idLink,setIdLink] = useState(1);
     const location = useLocation().pathname;
+    const [idLink,setIdLink] = useState(linkArr.find(element => location.includes(element.link)).id);
     
-    const filterPage = () =>{
-        const pageNames = {
-            "/":"Inicio",
-            "/about":"Sobre mi",
-            "/portafolio":"Portafolio",
-        };
-        let route = "";
-        for(const prop in pageNames){
-            if(location.includes(prop)){
-                route=prop;
-            }
-        }
-        return pageNames[route];
-    }
 
-
-    const changeId =(id)=>{
+    const changeId = (id) => {
         setIdLink(id);
     }
+
+    useEffect(()=>{
+        setIdLink(linkArr.find(element => location.includes(element.link)).id)
+    },[location])
 
     const styles = {
         pointerEvent: "none",
@@ -43,7 +32,7 @@ export default function ButtonSetPortafolio(){
 
     return(
         <div id='button-set-portafolio'>
-            {linkArr.map(element => (idLink === element.id) ? <ButtonLink styles={styles} key={element.id} click={()=>changeId(element.id)} classBtn={"button-portafolio"} route={element.link} text={element.name} />:<ButtonLink key={element.id} click={()=>changeId(element.id)} classBtn={"button-portafolio"} route={element.link} text={element.name} /> )}
+            {linkArr.map(element => (idLink === element.id) ? <ButtonLink styles={styles} key={element.id} click={()=>{changeId(element.id)}} classBtn={"button-portafolio"} route={element.link} text={element.name} />:<ButtonLink key={element.id} click={()=>changeId(element.id)} classBtn={"button-portafolio"} route={element.link} text={element.name} /> )}
         </div>
     )
 }
