@@ -24,7 +24,6 @@ export const useFilterLevelProject=()=>{
         }else{
             text = "Por definir...";
         }
-        console.log(text)
         return text;
     };
 
