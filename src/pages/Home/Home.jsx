@@ -5,6 +5,8 @@ import Title from '../../components/Title/Title'
 import ImageSectionTecnology from '../../layouts/ImageSectionTecnology/ImageSectionTecnology';
 import './styles.scss'
 import ButtonLink from "../../components/ButtonLink/ButtonLink";
+import DownloadButton from "../../components/DownloadButton/DownloadButton";
+import { DownloadCV } from "../../utils/functions/DownloadCV";
 
 export default function Home(){
     const [width, setWidth] = useState(window.innerWidth);
@@ -30,7 +32,7 @@ export default function Home(){
                 >
                 <div className="button-set">
                     <ButtonLink classBtn={"button-general"} route={'/about'} text={'Más sobre mi'} /> 
-                    <ButtonLink classBtn={"button-general"} text={'Mi CV'}/>
+                    <DownloadButton click={()=>DownloadCV()} classBtn={"button-general"} text={'Mi CV'}/>
                 </div>               
             </section>
             <section>

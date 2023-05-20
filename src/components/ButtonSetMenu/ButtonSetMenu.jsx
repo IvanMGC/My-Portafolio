@@ -2,6 +2,8 @@ import ButtonLink from '../ButtonLink/ButtonLink';
 import PropTypes from 'prop-types';
 
 import './styles.scss';
+import DownloadButton from '../DownloadButton/DownloadButton';
+import { DownloadCV } from '../../utils/functions/DownloadCV';
 
 export default function ButtonSetMenu({click}){
     const stringClass = "button-menu";
@@ -10,7 +12,7 @@ export default function ButtonSetMenu({click}){
             <ButtonLink classBtn={stringClass} click={click} route={'/'} text={'Inicio'} />
             <ButtonLink classBtn={stringClass} click={click} route={'/about'} text={'Sobre mi'} />
             <ButtonLink classBtn={stringClass} click={click} route={'/portafolio/basico'} text={'Portafolio'} />
-            <ButtonLink classBtn={stringClass} route={'#'} text={'Mi CV'} />
+            <DownloadButton classBtn={stringClass} click={()=>DownloadCV()} text={'Mi CV'} />
         </div>
     )
 }

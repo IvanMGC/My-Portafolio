@@ -1,12 +1,14 @@
 .button-set{
     display: flex;
     justify-content: center;
+    
     .button-general{
         margin: 0 5%;
         padding: 0;
         background: none;
         border: none;
-        a{
+        cursor: pointer;
+        a,p{
             background: #F7DF1E;
             border-radius: 10px;
             font-family: 'Poppins-Medium';
@@ -16,6 +18,10 @@
             text-decoration: none;
         }
         a:hover{
+            background-color: #2D2D2D;
+            color: #F7DF1E;
+        }
+        p:hover{
             background-color: #2D2D2D;
             color: #F7DF1E;
         }
