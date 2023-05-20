@@ -1,0 +1,43 @@
+#box-info-about-me{
+    display: flex;
+    flex-direction: column;
+    .img-person{
+        margin: 6% 0;
+        display: flex;
+        justify-content: center;
+        svg{
+            width: 80%;
+        }
+    }
+}
+
+@media (min-width: 550px){
+    #box-info-about-me{
+        flex-direction: row;
+    
+        .infor{
+            width: 50%;
+            margin: 0;
+            margin-right: 2%;
+            display: flex;
+            flex-direction: column;
+        }
+        .img-person{
+            margin: 0;
+            width: 50%;
+            margin-left: 2%;
+            svg{
+                width: 100%;
+            }
+        }
+    }
+}
+@media (min-width: 643px){
+    #box-info-about-me{
+        .img-person{
+            svg{
+                width: 80%;
+            }
+        }
+    }
+}

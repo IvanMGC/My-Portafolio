@@ -18,7 +18,7 @@ export default function Router({windowSize}){
     const router = createBrowserRouter([
         {
             path:'/',
-            element: (windowSize >= 744)?<h1>Por el momento esta para tamaño Mobile</h1>:<Mobile/>,
+            element: (windowSize >= 744)?<h1>Por el momento esta para tamaño menos de 744px</h1>:<Mobile/>,
             children:[
                 {
                     path: "/",

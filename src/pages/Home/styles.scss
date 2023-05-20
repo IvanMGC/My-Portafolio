@@ -1,3 +1,17 @@
+#presentation-content{
+    display: flex;
+    flex-direction: column;
+    .infor{
+        margin-bottom: 6%;
+    }
+    .img-person{
+        display: flex;
+        justify-content: center;
+        svg{
+            width: 80%;
+        }
+    }
+}
 .button-set{
     display: flex;
     justify-content: center;
@@ -9,6 +23,7 @@
         border: none;
         cursor: pointer;
         a,p{
+            margin: 0;
             background: #F7DF1E;
             border-radius: 10px;
             font-family: 'Poppins-Medium';
@@ -24,6 +39,28 @@
         p:hover{
             background-color: #2D2D2D;
             color: #F7DF1E;
+        }
+    }
+}
+
+@media (min-width: 550px){
+    #presentation-content{
+        flex-direction: row;
+    
+        .infor{
+            width: 50%;
+            margin: 0;
+            margin-right: 2%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .img-person{
+            width: 50%;
+            margin-left: 2%;
+            svg{
+                width: 100%;
+            }
         }
     }
 }
