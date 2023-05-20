@@ -77,11 +77,6 @@
     
 }
 
-.material-symbols-outlined {
-    color:rgb(255, 255, 255);
-    transition: all .2s;
-}
-
 #history button{
     background-color: #b9b9b9;
     border-radius: 50px;
@@ -99,11 +94,6 @@
 #history button:active{
     border-bottom: none;
 }
-
-.material-symbols-outlined:hover{
-    color:rgb(255, 255, 255)
-}
-
 
 #calculator-base{
     padding: 10px;
@@ -135,10 +125,11 @@
 
 
 .show-out .out{
+    margin: 0;
+    padding: 0 3%;
     color: white;
     font-family: 'SF-Digital-Readout-Light-Obliq';
     text-align: right;
-    margin: 0;
     font-size: 35px;
     
 }

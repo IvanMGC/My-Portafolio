@@ -1,6 +1,7 @@
 import { useState } from "react"
 import "./styles.scss"
 import PropTypes from 'prop-types';
+import ImgcHistory from "../../assets/Icons/ImgcHistory";
 
 const Button = ({text,nclass,row,col,click}) =>{
   return(
@@ -112,7 +113,7 @@ export default function CalculatorBase(){
     <div id="content-calculator">
       <div id="history">
         <div id="decoration"><div className="box"/><div className="box"/><div className="box"/></div>
-        <button onClick={()=>{setVisible(!visible)}} ><span className="material-symbols-outlined">history</span></button>
+        <button onClick={()=>{setVisible(!visible)}} ><ImgcHistory  /></button>
       </div>
       <History isVisible={visible} history={history} fun={(op,rs)=>{inputHistory(op,rs)}}/>
       <table id="calculator-base">

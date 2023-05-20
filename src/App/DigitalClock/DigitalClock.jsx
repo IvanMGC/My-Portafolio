@@ -8,30 +8,30 @@ const ButtonClock = ({classs,fun}) => {
         <button className={classs} onClick={()=>{fun()}}/>
     )
 }
-const ShowCurrentDay=({day})=>{
+const ShowCurrentDay=({day,itsOn})=>{
     const weekDay = ["SUN","MON","TUE","WED","THU","FRI","SAT"];
     return(
-        <div className='show-current-day'>
+        <div style={{color: itsOn ? "rgb(119, 119, 119)":"white"}} className='show-current-day'>
             {weekDay.map((e,i)=>(day!==i)?<span key={e}>{e}</span>:<span key={e} className='day-red'>{e}</span>)}
         </div>
     )
 }
 
-const ShowCurrentDate=({date})=>{
+const ShowCurrentDate=({date, itsOn})=>{
     const cDate = date.split("/").map(e=>e.toString().padStart(2,0));
     return(
         <div className='show-current-date'>
-            <span className='dc-number'>{cDate[0]}</span>
-            <span className='dc-chart'>DAY</span>
-            <span className='dc-number'>{cDate[1]}</span>
-            <span className='dc-chart'>MONTH</span>
-            <span className='dc-number'>{cDate[2]}</span>
-            <span className='dc-chart'>YEAR</span>
+            <span style={{color: itsOn ? "rgb(150, 7, 7)":"rgb(255, 18, 18)"}} className='dc-number'>{cDate[0]}</span>
+            <span style={{color: itsOn ? "rgb(119, 119, 119)":"white"}} className='dc-chart'>DAY</span>
+            <span style={{color: itsOn ? "rgb(150, 7, 7)":"rgb(255, 18, 18)"}} className='dc-number'>{cDate[1]}</span>
+            <span style={{color: itsOn ? "rgb(119, 119, 119)":"white"}} className='dc-chart'>MONTH</span>
+            <span style={{color: itsOn ? "rgb(150, 7, 7)":"rgb(255, 18, 18)"}} className='dc-number'>{cDate[2]}</span>
+            <span style={{color: itsOn ? "rgb(119, 119, 119)":"white"}} className='dc-chart'>YEAR</span>
         </div>
     )
 }
 
-const ShowCurrentTime=({time})=>{
+const ShowCurrentTime=({time,itsOn})=>{
     let dayArr = [];
     for(let i =0; i < time.length;i++){
         if(time[i]===":"){
@@ -42,7 +42,7 @@ const ShowCurrentTime=({time})=>{
         }
     }
     return(
-        <div className="show-current-time">
+        <div style={{color: itsOn ? "rgb(150, 7, 7)":"rgb(255, 18, 18)"}} className="show-current-time">
             {dayArr.map((e,i)=>(e!==":")?<span key={i} className='number'>{e}</span>:<span key={i}>{e}</span>)}
         </div>
     )
@@ -89,10 +89,10 @@ const AppDigitalClock = () =>{
             <div id='content-digital-clock'>
                 <div id='digital-clock'>
                     <div id='window-digital-clock'>
-                        <ShowCurrentTime time={time} />
+                        <ShowCurrentTime time={time} itsOn={isActive} />
                         <div className='dc-window-second'>
-                            <ShowCurrentDate date={date} />
-                            <ShowCurrentDay day={day} />
+                            <ShowCurrentDate itsOn={isActive} date={date} />
+                            <ShowCurrentDay itsOn={isActive} day={day} />
                         </div>
                     </div>
                 </div>
@@ -110,12 +110,15 @@ ButtonClock.propTypes = {
 
 ShowCurrentDay.propTypes = {
 	day: PropTypes.number,
+    itsOn: PropTypes.bool,
 }
 
 ShowCurrentDate.propTypes = {
 	date: PropTypes.string,
+    itsOn: PropTypes.bool,
 }
 
 ShowCurrentTime.propTypes = {
 	time: PropTypes.string,
+    itsOn: PropTypes.bool,
 }
