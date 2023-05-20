@@ -3,16 +3,16 @@ import './styles.scss';
 import ButtonSetPortafolio from '../../layouts/ButtonSetPortafolio/ButtonSetPortafolio';
 import SubTitle from '../../components/SubTitle/SubTitle';
 
-import { useFilterLevelProject } from '../../utils/hooks/useFilterLevelProject';
+import { useFilterProjectLevel } from '../../utils/hooks/useFilterProjectLevel';
 
 export default function Portafolio(){
-    const filterLevel = useFilterLevelProject();
+    const {titleProjectLevel, numberProjectsLevel} = useFilterProjectLevel();
 
     return(
         <div id='portafolio'>
             <ButtonSetPortafolio />
             <section>
-                <SubTitle styles={{textAlign:"center"}} subTitle={filterLevel} />
+                <SubTitle styles={{textAlign:"center"}} subTitle={`${titleProjectLevel()} (${numberProjectsLevel()})`} />
                 <div id='project-container'>
                     <Outlet />
                 </div>
