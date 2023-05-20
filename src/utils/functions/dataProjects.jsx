@@ -12,10 +12,13 @@ import accountant from '../../assets/Images/accountant.jpg';
 import relojDigital from '../../assets/Images/reloj-digital.jpg';
 import slider from '../../assets/Images/slider.jpg';
 
+//Functions
+import { removeAccents } from "./removeAccents";
+
 const dataProjects = [
     {id:1,name:"Calculadora",description: "React, Sass, HTML5", nivel:"Básico",project:<CalculatorBase />, link:"",img:calculator,},
     {id:2,name:"Contador",description: "React, Sass, HTML5", nivel:"Básico",project:<AppAccountant />, link:"",img:accountant,},
-    {id:3,name:"Cronometro",description: "React, Sass, HTML5", nivel:"Básico",project:<AppChronometer />, link:"",img:chronometer,},
+    {id:3,name:"Cronómetro",description: "React, Sass, HTML5", nivel:"Básico",project:<AppChronometer />, link:"",img:chronometer,},
     {id:4,name:"Reloj Digital",description: "React, Sass, HTML5", nivel:"Básico",project:<AppDigitalClock />, link:"",img:relojDigital,},
     {id:5,name:"Slider",description: "React, Sass, HTML5", nivel:"Básico",project:<AppSlider />, link:"",img:slider,},
 ];
@@ -28,7 +31,7 @@ export function getNumLevelsProjects(){
     let levels = {basico:0,intermedio:0,avanzado:0};
 
     dataProjects.forEach(element => {
-        levels[element.nivel.toLowerCase()]++;
+        levels[removeAccents(element.nivel.toLowerCase())]++;
     });
     return levels;
 }
