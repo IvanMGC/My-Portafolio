@@ -1,16 +1,22 @@
+//Components
 import CardProject from '../../components/CardProject/CardProject';
-import PropTypes from 'prop-types';
+
+//Style
 import './styles.scss';
 
-export default function SetProyects({handleclick,data}){
+//Functions
+import { removeAccents } from '../../utils/functions/removeAccents';
+import { getProjects } from '../../utils/functions/dataProjects';
+
+//Hooks
+import { useParams } from 'react-router-dom';
+
+export default function SetProyects(){
+    const { projectLevel } = useParams();
+
     return(
         <>
-            {data.map(element => <CardProject key={element.id} click={()=>handleclick(element.id)} urlProyect={`/portafolio/${element.nivel.toLowerCase()}/${element.name.toLowerCase()}`} nameProject={element.name} desProject={element.description} img={element.img} />)}
+            {getProjects().filter(element => removeAccents(element.nivel.toLowerCase()) === projectLevel).map(element => <CardProject key={element.id} urlProyect={`/portafolio/${removeAccents(element.nivel.toLowerCase())}/${element.name.toLowerCase()}`} nameProject={element.name} desProject={element.description} img={element.img} />)}
         </>
     )
-}
-
-SetProyects.propTypes = {
-    data: PropTypes.array,
-    handleclick: PropTypes.func,
 }
