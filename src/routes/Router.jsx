@@ -1,5 +1,4 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { useState } from "react";
 import PropTypes from 'prop-types';
 
 //Views
@@ -14,17 +13,8 @@ import Project from "../pages/Project/Project";
 //Layouts
 import SetProyects from "../layouts/SetProyects/SetProyects";
 
-//Functions
-import { getProjects } from "../utils/functions/dataProjects";
-
 export default function Router({windowSize}){
-    
-    const [projects] = useState(getProjects())
-    const [selectedProject,setSelectedProject] = useState(projects[0]);
-    
-    const selectProject = (id) =>{
-        setSelectedProject(projects[id-1]);
-    }
+
     const router = createBrowserRouter([
         {
             path:'/',
@@ -43,23 +33,14 @@ export default function Router({windowSize}){
                     element: <Portafolio />,
                     children:[
                         {
-                            path:"/portafolio/basico",
-                            element: <SetProyects handleclick={(id)=>{selectProject(id)}} data={projects} />
-                        },
-                        {
-                            path:"/portafolio/intermedio",
-                            element: <></>
-                        },
-                        {
-                            path:"/portafolio/avanzado",
-                            element: <></>
-                        },
+                            path:"/portafolio/:projectLevel",
+                            element: <SetProyects />
+                        }
                     ]
                 },
                 {
-                    path:`/portafolio/${selectedProject.nivel.toLowerCase()}/${selectedProject.name.toLowerCase()}`,
-                    element:<Project project={selectedProject.project} />,
-                    loader: ()=>selectedProject
+                    path:"/portafolio/:projectLevel/:projectName",
+                    element:<Project />,
                 },
                 
             ]

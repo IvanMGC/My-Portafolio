@@ -1,17 +1,28 @@
-import { useEffect, useState } from 'react';
-import ButtonLink from '../../components/ButtonLink/ButtonLink';
-import './styles.scss';
+//Hooks
 import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+
+//Components
+import ButtonLink from '../../components/ButtonLink/ButtonLink';
+
+//Style
+import './styles.scss';
+
+
+
+//Functions
+import { removeAccents } from '../../utils/functions/removeAccents';
+
 
 const linkArr = [
-    {id:1, link: "/portafolio/basico", name: "Básico"},
-    {id:2, link: "/portafolio/intermedio", name: "Intermedio"},
-    {id:3, link: "/portafolio/avanzado", name: "Avanzado"},
+    {id:1, name: "Básico"},
+    {id:2, name: "Intermedio"},
+    {id:3, name: "Avanzado"},
 ];
 
 export default function ButtonSetPortafolio(){
     const location = useLocation().pathname;
-    const [idLink,setIdLink] = useState(linkArr.find(element => location.includes(element.link)).id);
+    const [idLink,setIdLink] = useState(linkArr.find(element => location.includes(`/portafolio/${removeAccents(element.name.toLowerCase())}`)).id);
     
 
     const changeId = (id) => {
@@ -19,7 +30,7 @@ export default function ButtonSetPortafolio(){
     }
 
     useEffect(()=>{
-        setIdLink(linkArr.find(element => location.includes(element.link)).id)
+        setIdLink(linkArr.find(element => location.includes(`/portafolio/${removeAccents(element.name.toLowerCase())}`)).id)
     },[location])
 
     const styles = {
@@ -32,7 +43,7 @@ export default function ButtonSetPortafolio(){
 
     return(
         <div id='button-set-portafolio'>
-            {linkArr.map(element => (idLink === element.id) ? <ButtonLink styles={styles} key={element.id} click={()=>{changeId(element.id)}} classBtn={"button-portafolio"} route={element.link} text={element.name} />:<ButtonLink key={element.id} click={()=>changeId(element.id)} classBtn={"button-portafolio"} route={element.link} text={element.name} /> )}
+            {linkArr.map(element => (idLink === element.id) ? <ButtonLink styles={styles} key={element.id} classBtn={"button-portafolio"} route={`/portafolio/${removeAccents(element.name.toLowerCase())}`} text={element.name} />:<ButtonLink key={element.id} click={()=>changeId(element.id)} classBtn={"button-portafolio"} route={`/portafolio/${removeAccents(element.name.toLowerCase())}`} text={element.name} /> )}
         </div>
     )
 }
