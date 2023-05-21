@@ -16,7 +16,7 @@ export default function SetProyects(){
 
     return(
         <>
-            {getProjects().filter(element => removeAccents(element.nivel.toLowerCase()) === projectLevel).map(element => <CardProject key={element.id} urlProyect={`/portafolio/${removeAccents(element.nivel.toLowerCase())}/${element.name.toLowerCase()}`} nameProject={element.name} desProject={element.description} img={element.img} />)}
+            {getProjects().filter(element => removeAccents(element.nivel.toLowerCase()) === projectLevel).map(element => <CardProject key={element.id} urlProyect={`/portafolio/${removeAccents(element.nivel.toLowerCase())}/${removeAccents(element.name.toLowerCase())}`} nameProject={element.name} desProject={element.description} img={element.img} />)}
         </>
     )
 }
