@@ -64,3 +64,23 @@
         }
     }
 }
+
+@media (min-width: 744px){
+    #presentation-content{
+        flex-direction: column;
+        .infor{
+            width: 100%;
+            margin: 0;
+            margin-bottom: 6%;
+            display: block;
+        }
+        .img-person{
+            width: 100%;
+            margin: 0;
+            svg{
+                width: 80%;
+            }
+        }
+
+    }
+}

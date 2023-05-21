@@ -41,3 +41,22 @@
         }
     }
 }
+
+@media (min-width: 744px){
+    #box-info-about-me{
+        flex-direction: column;
+    
+        .infor{
+            width: 100%;
+            margin: 0;
+        }
+        .img-person{
+            margin: 0;
+            margin: 6% 0;
+            width: 100%;
+            svg{
+                width: 80%;
+            }
+        }
+    }
+}

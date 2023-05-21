@@ -15,11 +15,10 @@ import SetProyects from "../layouts/SetProyects/SetProyects";
 import Desktop from "../views/Desktop/Desktop";
 
 export default function Router({windowSize}){
-
     const router = createBrowserRouter([
         {
             path:'/',
-            element: (windowSize >= 744)?<Desktop wSize={windowSize} />:<Mobile/>,
+            element: (windowSize >= 744)?<Desktop />:<Mobile wSize={windowSize}/>,
             children:[
                 {
                     path: "/",

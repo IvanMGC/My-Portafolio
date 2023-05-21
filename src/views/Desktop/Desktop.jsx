@@ -1,8 +1,10 @@
+import { Outlet } from 'react-router-dom';
 import FooterMobile from '../../layouts/Footer/FooterMobile';
+import HeaderMobile from '../../layouts/Header/HeaderMobile';
 import PaginationMenu from '../../layouts/PaginationMenu/Menu';
 import './styles.scss';
-import PropTypes from 'prop-types';
-export default function Desktop({wSize}){
+export default function Desktop(){
+
     return(
         <div id='content-tablet-desktop'>
             <div id='content-mix'>
@@ -10,14 +12,13 @@ export default function Desktop({wSize}){
                     <PaginationMenu />
                 </div>
                 <div id='general-content'>
-                    Hola2
+                    <HeaderMobile />
+                    <div id='content-pages'>
+                        <Outlet />
+                    </div>
                 </div>
             </div>
             <FooterMobile />
         </div>
     )
-}
-
-Desktop.propTypes = {
-    wSize: PropTypes.number,
 }

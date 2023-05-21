@@ -1,7 +1,7 @@
 #content-tablet-desktop{
     width: 100%;
     height: 832px;
-    margin: 0 4%;
+    margin: 0 2%;
     border-radius: 24px;
     border:1px solid black;
     display: flex;
@@ -12,6 +12,7 @@
 
     #content-mix{
         flex-grow: 1;
+        height: 0%;
         display: flex;
 
         #navigation-bar{
@@ -19,7 +20,18 @@
             background: #F7DF1E;
         }
         #general-content{
+            width: 50%;
             flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            #content-pages{
+                flex-grow: 1;
+                padding: 35px;
+                overflow: scroll;
+            }
+            #content-pages::-webkit-scrollbar{
+                display: none;
+            }
         }
     }
 
@@ -27,4 +39,11 @@
 
 @media (max-height: 832px){
 
+}
+
+@media (min-width: 1440px){
+    #content-tablet-desktop{
+        width: 1440px;
+        margin: 0;
+    }
 }
