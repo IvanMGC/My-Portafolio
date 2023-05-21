@@ -83,3 +83,8 @@ a,button {
     -webkit-tap-highlight-color: transparent;
   }
 
+@media (min-width: 744px){
+    #root{
+        align-items: center;
+    }
+}

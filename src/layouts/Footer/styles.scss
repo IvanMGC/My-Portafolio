@@ -9,3 +9,12 @@
         height: 59px;
     }
 }
+
+@media (min-width: 744px){
+    #footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 76px;
+    }
+}
