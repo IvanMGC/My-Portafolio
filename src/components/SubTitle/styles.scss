@@ -2,6 +2,11 @@
     font-family: "IBMPlexSans-Medium";
     margin: 0;
     margin-bottom: 10px;
+    transition: all .3s;
+
+    body.dark &{
+            color: #ffffff;
+    }
 }
 
 @media (min-width: 744px){

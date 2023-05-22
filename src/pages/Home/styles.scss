@@ -6,17 +6,17 @@
 
         .button-set{
             display: flex;
-            justify-content: center;
-            
+            justify-content: space-evenly;
             .button-general{
-                margin: 0 5%;
                 padding: 0;
                 background: none;
                 border: none;
                 cursor: pointer;
+                
                 a,p{
                     width: 110px;
                     margin: 0;
+                    border:1px solid #F7DF1E;
                     background: #F7DF1E;
                     border-radius: 10px;
                     font-family: 'Poppins-Medium';
@@ -24,6 +24,14 @@
                     display: block;
                     color:#000000;
                     text-decoration: none;
+                    transition: all .3s;
+                    body.dark &{
+                        &:hover{
+                            border:1px solid #F7DF1E;
+                            background: #222222;
+                        }
+                        
+                    }
                 }
                 a:hover{
                     background-color: #2D2D2D;
@@ -33,6 +41,8 @@
                     background-color: #2D2D2D;
                     color: #F7DF1E;
                 }
+                
+                
             }
         }
     }

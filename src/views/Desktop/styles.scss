@@ -10,12 +10,14 @@
     position: relative;
     overflow: hidden;
     box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.384), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    transition: all .3s;
     #content-mix{
         flex-grow: 1;
         height: 0%;
         display: flex;
-
         #navigation-bar{
+            position: relative;
+            z-index: 1;
             width: 254px;
             background: #F7DF1E;
         }
@@ -41,6 +43,9 @@
                 background-color: #ffd000;
             }
         }
+    }
+    body.dark &{
+        background: #2c2c2c;
     }
 
 }

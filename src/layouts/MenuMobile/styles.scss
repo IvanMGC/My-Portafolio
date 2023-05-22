@@ -15,7 +15,13 @@
 
 
     .btn-menu-mobile{
-        padding: 13px 13px 0 13px;        
+        padding: 13px 13px 0 13px;
+        .button-header{
+            transition: all .3s;
+            body.dark &{
+                background: none;
+            }
+        }    
     }
 }
 

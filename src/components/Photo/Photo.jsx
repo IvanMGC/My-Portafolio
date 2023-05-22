@@ -1,5 +1,5 @@
 import './styles.scss';
-import myPhoto from '../../assets/Images/foto.jpg';
+import myPhoto from '../../assets/Images/foto.png';
 
 export default function Photo(){
     return(

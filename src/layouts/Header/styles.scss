@@ -1,6 +1,8 @@
 #header-mobile{
     height: 59px;
     box-shadow: 0 3px 5px 0 rgb(212, 212, 212);
+    background: #ffffff;
+    transition: all .3s;
     .content-header{
         padding: 0 12px 0 12px;
         height: 59px;
@@ -8,13 +10,20 @@
         justify-content: space-between;
         align-items: center;
     }
+    body.dark &{
+        background: #222222;
+        box-shadow: 0 3px 5px 0 #1d1d1d;
+    }
 }
 @media (min-width: 744px){
     #header-mobile{
         height: 76px;
         .content-header{
             height: 76px;
-            padding: 0 16px 0 16px;
+            padding: 0 30px 0 30px;
+            .title-page{
+                font-size: 20px;
+            }
         }
     }
 }

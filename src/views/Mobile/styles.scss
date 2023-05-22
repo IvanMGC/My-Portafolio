@@ -10,6 +10,7 @@
     position: relative;
     overflow: hidden;
     box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.384), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    transition: all .3s;
     .content-pages{ 
         flex-grow: 1;
         padding: 6%;
@@ -19,6 +20,9 @@
     }
     .content-pages::-webkit-scrollbar{
         display: none;
+    }
+    body.dark &{
+        background: #2c2c2c;
     }
 }
 
