@@ -5,3 +5,22 @@
     justify-content: center;
     
 }
+
+#portafolio{
+    section{
+        .sub-title{
+            color:rgb(140 140 140);
+        }   
+    }
+}
+
+@media (min-width: 744px){
+    #portafolio{
+        section{
+            .sub-title{
+                font-size: 18px;
+                color:rgb(140 140 140);
+            }
+        }
+    }
+}

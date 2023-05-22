@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Paragraph from '../../components/Paragraph/Paragraph';
 import SubTitle from '../../components/SubTitle/SubTitle'
 import Title from '../../components/Title/Title'
@@ -10,18 +9,6 @@ import { DownloadCV } from "../../utils/functions/DownloadCV";
 import ImgcPersonProgramming from "../../assets/Images/ImgcPersonProgramming";
 
 export default function Home(){
-    const [width, setWidth] = useState(window.innerWidth);
-  
-    const changeSize = () =>{
-      setWidth(window.innerWidth);
-    }
-  
-    useEffect(()=>{
-      window.addEventListener('resize',changeSize);
-      return()=>{
-        window.removeEventListener('resize',changeSize);
-      }
-    });
 
     const txtParagraph = "Egresado y con Bachiller en Ingeniería de Sistemas 2022. Actualmente me encuentro especializandome como desarrollador Front end siguiendo la ruta MERN.";
     return(
@@ -43,7 +30,7 @@ export default function Home(){
             </section>
             <section>
                 <SubTitle styles={{textAlign:"center"}} subTitle={"Mis habilidades y conocimientos"} />
-                <ImageSectionTecnology widthIcon={(width >= 443)? "55px":"41px"} />
+                <ImageSectionTecnology />
             </section>
         </>
     )

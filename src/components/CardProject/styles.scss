@@ -6,7 +6,7 @@
     background: #2D2D2D;
     text-decoration: none;
     overflow: hidden;
-
+    box-shadow:7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
     .contenet-card{
         flex-grow: 1;
         img{
@@ -37,3 +37,24 @@
     }
 }
 
+@media (min-width: 744px) {
+    .card-projects{
+        width: 174px;
+        .box-descripcion{
+            h1,p{
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media (min-width: 910px) {
+    .card-projects{
+        width: 249px;
+        .box-descripcion{
+            h1,p{
+                font-size: 16px;
+            }
+        }
+    }
+}

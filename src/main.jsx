@@ -16,7 +16,6 @@ function Apps(){
         window.removeEventListener('resize',changeSize);
       }
     });
-
     return(
       <Router windowSize={width} />
     )

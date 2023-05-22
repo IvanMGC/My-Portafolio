@@ -1,5 +1,9 @@
 .title{
     font-family: 'Poppins-SemiBold';
-    margin: 0;
-    
+    margin: 0;   
+}
+@media (min-width: 744px){
+    .title{
+        font-size: 32px;
+    }
 }

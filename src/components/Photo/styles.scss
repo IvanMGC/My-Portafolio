@@ -1,8 +1,14 @@
 #photo{
-    border-radius: 50%;
     overflow: hidden;
     margin: 0 0 5% 0;
     img{
+        border-radius: 50%;
         width: 100%;
+    }
+}
+
+@media (min-width: 744px){
+    #photo{
+        margin: 0;
     }
 }

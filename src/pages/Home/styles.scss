@@ -3,6 +3,38 @@
     flex-direction: column;
     .infor{
         margin-bottom: 6%;
+
+        .button-set{
+            display: flex;
+            justify-content: center;
+            
+            .button-general{
+                margin: 0 5%;
+                padding: 0;
+                background: none;
+                border: none;
+                cursor: pointer;
+                a,p{
+                    width: 110px;
+                    margin: 0;
+                    background: #F7DF1E;
+                    border-radius: 10px;
+                    font-family: 'Poppins-Medium';
+                    padding: 5px 0;
+                    display: block;
+                    color:#000000;
+                    text-decoration: none;
+                }
+                a:hover{
+                    background-color: #2D2D2D;
+                    color: #F7DF1E;
+                }
+                p:hover{
+                    background-color: #2D2D2D;
+                    color: #F7DF1E;
+                }
+            }
+        }
     }
     .img-person{
         display: flex;
@@ -12,36 +44,7 @@
         }
     }
 }
-.button-set{
-    display: flex;
-    justify-content: center;
-    
-    .button-general{
-        margin: 0 5%;
-        padding: 0;
-        background: none;
-        border: none;
-        cursor: pointer;
-        a,p{
-            margin: 0;
-            background: #F7DF1E;
-            border-radius: 10px;
-            font-family: 'Poppins-Medium';
-            padding: 5px 12px;
-            display: block;
-            color:#000000;
-            text-decoration: none;
-        }
-        a:hover{
-            background-color: #2D2D2D;
-            color: #F7DF1E;
-        }
-        p:hover{
-            background-color: #2D2D2D;
-            color: #F7DF1E;
-        }
-    }
-}
+
 
 @media (min-width: 550px){
     #presentation-content{
@@ -62,5 +65,58 @@
                 width: 100%;
             }
         }
+    }
+}
+
+@media (min-width: 744px){
+    #presentation-content{
+        flex-direction: column;
+        .infor{
+            width: 100%;
+            margin: 0;
+            margin-bottom: 6%;
+            display: block;
+
+            .button-set{
+                .button-general{
+                    a,p{
+                        padding: 5px 0;
+                        width: 126px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .img-person{
+            width: 100%;
+            margin: 0;
+            svg{
+                width: 80%;
+            }
+        }
+
+    }
+}
+
+@media (min-width: 950px){
+    #presentation-content{
+        flex-direction: row;
+        .infor{
+            width: 50%;
+            margin: 0;
+            margin-right: 2%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .img-person{
+            width: 50%;
+            margin: 0;
+            margin-left: 2%;
+            svg{
+                width: 100%;
+            }
+        }
+
     }
 }

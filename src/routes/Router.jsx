@@ -12,13 +12,13 @@ import Project from "../pages/Project/Project";
 
 //Layouts
 import SetProyects from "../layouts/SetProyects/SetProyects";
+import Desktop from "../views/Desktop/Desktop";
 
 export default function Router({windowSize}){
-
     const router = createBrowserRouter([
         {
             path:'/',
-            element: (windowSize >= 744)?<h1>Por el momento esta para tamaño menos de 744px</h1>:<Mobile/>,
+            element: (windowSize >= 744)?<Desktop />:<Mobile wSize={windowSize}/>,
             children:[
                 {
                     path: "/",
