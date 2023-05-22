@@ -1,6 +1,6 @@
 import ImgcSoftwareDeveloper from '../../assets/Images/ImgcSoftwareDeveloper';
 import Paragraph from '../../components/Paragraph/Paragraph';
-import Title from '../../components/Title/Title';
+import SubTitle from '../../components/SubTitle/SubTitle';
 
 import './styles.scss';
 
@@ -18,7 +18,7 @@ export default function About(){
                 </div>
             </div>
             <section>
-                <Title title={"Timeline de mi vida"} />
+                <SubTitle subTitle={"Timeline de mi vida"}  />
                 <Paragraph text={"En proceso.."} />
             </section>
         </>

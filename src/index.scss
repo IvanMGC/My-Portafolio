@@ -66,6 +66,7 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
+
 }
 
 #root{
@@ -73,6 +74,19 @@ body{
     flex-grow: 1;
     height: 100vh;
     justify-content: center;
+    position: relative;
+    background-image: linear-gradient(0deg, rgba(207,245,222,1) 0%, rgba(143,206,237,1) 35%, rgba(102,182,245,1) 71%, rgba(77,166,251,1) 100%);
+    background-image: url('./assets/Images/estrellas.svg') ,linear-gradient(0deg, rgba(77,124,220,1) 0%, rgba(49,82,204,1) 35%, rgba(0,68,182,1) 71%, rgba(58,67,172,1) 100%);
+}
+#root::before{
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url('./assets/Images/Paisaje.svg');
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
 }
 
 section{

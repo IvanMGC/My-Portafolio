@@ -12,7 +12,7 @@ export default function Portafolio(){
         <div id='portafolio'>
             <ButtonSetPortafolio />
             <section>
-                <SubTitle styles={{textAlign:"center"}} subTitle={`${titleProjectLevel()} (${numberProjectsLevel()})`} />
+                <SubTitle subTitle={`${titleProjectLevel()} (${numberProjectsLevel()})`} />
                 <div id='project-container'>
                     <Outlet />
                 </div>

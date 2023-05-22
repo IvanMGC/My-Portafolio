@@ -34,9 +34,8 @@ export default function ButtonSetPortafolio(){
     },[location])
 
     const styles = {
-        pointerEvent: "none",
         background: "#F7DF1E",
-        color:"black",
+        color:"#fff",
         padding: "5px 9px",
         transition: "all .2s",
     }

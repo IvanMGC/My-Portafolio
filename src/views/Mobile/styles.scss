@@ -1,7 +1,7 @@
 #content-mobile{
+    background: #ffffff;
     margin: 4%;
     border-radius: 14px;
-    border: 1px solid black;
     min-width: 288px;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     
     position: relative;
     overflow: hidden;
-
+    box-shadow: 7px 7px 20px 0px rgba(0, 0, 0, 0.384), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
     .content-pages{ 
         flex-grow: 1;
         padding: 6%;

@@ -3,4 +3,25 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 15px;
+    .icons{
+        a{
+            svg{
+                width: 41px;
+            }
+        }
+    }
+}
+
+@media (min-width: 443px){
+    .image-section-tecnology{
+        margin: 0;
+        .icons{
+            margin: 10px;
+            a{
+                svg{
+                    width: 55px;
+                }
+            }
+        }
+    }
 }

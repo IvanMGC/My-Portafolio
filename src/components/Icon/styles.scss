@@ -1,3 +1,17 @@
 .icons{
     margin: 0 5px;
+    a{
+        svg{
+                width: 20px;
+        }
+    }
+}
+@media (min-width: 744px){
+    .icons{
+        a{
+            svg{
+                width: 26px;
+            }
+        }
+    }
 }
