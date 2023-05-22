@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 export default function ImgcMenu(props){
     return(
-        <svg
+        <svg className='svg-menu'
             xmlns="http://www.w3.org/2000/svg"
             id="Capa_1"
             width={21}

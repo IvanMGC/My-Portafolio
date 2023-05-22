@@ -1,6 +1,10 @@
 .title{
     font-family: 'Poppins-SemiBold';
-    margin: 0;   
+    margin: 0;
+    transition: all .3s;
+    body.dark &{
+        color: #ffffff;
+    }
 }
 @media (min-width: 744px){
     .title{

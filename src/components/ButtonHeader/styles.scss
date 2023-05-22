@@ -8,6 +8,12 @@
     align-items: center;
     background: none;
     cursor: pointer;
+    transition: all .3s;
+    body.dark &{
+        &:hover{
+            background: rgb(61, 61, 61);
+        }
+    }
 }
 .button-header:hover{
     background: rgb(245, 245, 245);

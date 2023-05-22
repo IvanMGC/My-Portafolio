@@ -1,9 +1,16 @@
 #photo{
     overflow: hidden;
+    border-radius: 50%;
     margin: 0 0 5% 0;
+    transition: all .3s;
     img{
         border-radius: 50%;
         width: 100%;
+        background: #ffffff;
+        transition: all .3s;
+        body.dark &{
+            background: #222222;
+        }
     }
 }
 
