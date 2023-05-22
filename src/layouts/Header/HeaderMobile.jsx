@@ -17,12 +17,12 @@ export default function HeaderMobile({isActivate, widthWindow}){
     const filterPage = useFilterPage();
     
     useEffect(() => {
+        document.body.classList.toggle('dark', isDarkMode);
         localStorage.setItem('isDarkMode', isDarkMode.toString());
     }, [isDarkMode]);
 
     const handleSwitchClick = () => {
         setIsDarkMode(!isDarkMode);
-        document.body.classList.toggle('dark');
     }
 
     
