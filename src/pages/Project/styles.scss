@@ -1,6 +1,16 @@
 #content-projects{
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    .title-project{
+        text-align: center;
+    }
+    .project{
+        margin: 20px 0;
+    }
+    .descrip-project{
+        .paragraph{
+            text-align: center;
+        }
+    }
 }
