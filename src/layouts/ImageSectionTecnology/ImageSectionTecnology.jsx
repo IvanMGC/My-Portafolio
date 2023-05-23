@@ -13,7 +13,7 @@ import ImgcAdobeIllustrator from '../../assets/Logos/ImgcAdobeIllustrator';
 import ImgcJava from '../../assets/Logos/ImgcJava';
 import ImgcMysql from '../../assets/Logos/ImgcMysql';
 import ImgcExcel from '../../assets/Logos/ImgcExcel';
-import ImgcScrum2 from '../../assets/Logos/ImgcScrum2';
+import ImgcScrum2 from '../../assets/Logos/ImgcScrum';
 
 //Style
 import './styles.scss';
