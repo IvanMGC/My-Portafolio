@@ -12,6 +12,7 @@ import accountant from '../../assets/Images/accountant.jpg';
 import relojDigital from '../../assets/Images/reloj-digital.jpg';
 import slider from '../../assets/Images/slider.jpg';
 import portafolio from '../../assets/Images/portafolio.jpg';
+import eCommerce from '../../assets/Images/ImagesE-Commerce+RA.jpg'
 
 //Functions
 import { removeAccents } from "./removeAccents";
@@ -23,6 +24,8 @@ const dataProjects = [
     {id:4,name:"Reloj Digital",description: "Hecho con React, Sass y HTML5.", nivel:"Básico",project:<AppDigitalClock />, link:"",img:relojDigital,},
     {id:5,name:"Slider",description: "Hecho con React, Sass y HTML5.", nivel:"Básico",project:<AppSlider />, link:"",img:slider,},
     {id:6,name:"Portafolio",description:"Hecho en Figma, React, Sass, HTML5",nivel:"Intermedio", project:null,link:"https://www.figma.com/file/6T0WxkXDCSMXplkTL2Lybr/Untitled?type=design&node-id=0%3A1&t=HGhSkGQWu57PLelj-1",img:portafolio},
+    {id:7,name:"E-Commerce + RA",description:"Hecho en WordPress, utilizando plugins, hosting SiteGround, JavaScript, HTML, CSS y Blender3D",nivel:"Intermedio", project:null,link:"https://recifejeansoficial.com/",img:eCommerce},
+
 ];
 
 export function getProjects(){
