@@ -4,7 +4,6 @@ import HeaderMobile from '../../layouts/Header/HeaderMobile';
 import PaginationMenu from '../../layouts/PaginationMenu/Menu';
 import './styles.scss';
 export default function Desktop(){
-
     return(
         <div id='content-tablet-desktop'>
             <div id='content-mix'>
